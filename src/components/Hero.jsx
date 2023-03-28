@@ -28,7 +28,10 @@ padding:10px 30px;
 
 const Right=styled.div`
 flex:2;
+position:relative;
+/*background-color:yellow;*/
 `;
+
 const Title=styled.h1`
 font-size:74px;
 `;
@@ -58,11 +61,24 @@ border-radius:5px;
 cursor:pointer;
 `;
 const Img=styled.img`
-/*width:700px;*/
-/*height:400px;*/
-/*object-fit:contain;*/
+width:600px;
+height:400px;
+object-fit:contain;
 position:absolute;
 
+
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+animation: animate 2s infinite ease alternate;
+
+@keyframes animate{
+  to{
+    transform: translateY(20px);
+  }
+}
 `;
 
 const Hero = () => {

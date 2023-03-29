@@ -40,6 +40,7 @@ cursor:pointer;
 color:transparent;
 -webkit-text-stroke:1px white;
 position:relative;
+
   ::after{
   content:"${(props)=>props.text}";
   position:absolute;
@@ -48,13 +49,17 @@ position:relative;
   color:pink;
   width:0px;
   overflow:hidden;
+  white-space:nowrap;
+
   }
+
   &:hover{
     ::after{
-      animation:moveText 0.5s linear;
+      animation:moveText 0.5s linear both;
+
       @keyframes moveText{
         to{
-
+            width:100%;
         }
       }
     }

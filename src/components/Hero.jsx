@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import { OrbitControls, Sphere, MeshDistortMaterial} from '@react-three/drei';
 import {Canvas} from '@react-three/fiber';
 
+
 const Section = styled.div`
 height:100vh;
 scroll-snap-align:center;
@@ -99,19 +100,20 @@ const Hero = () => {
         </Left>
         <Right>
             {/*3D model */}
-            <Canvas camera={{fov:25, position:[5,5,5]}}>
-            <OrbitControls enableZoon={false} autoRotate/>
-            <ambientLight intensity={1}/>
-            <directionalLight position={[3,2,1]}/>
-            <Sphere args={[1,100,200]} scale={1}/>
-            <MeshDistortMaterial/>
-          </Canvas>
+            <Canvas>
+              <OrbitControls enableZoom={false} autoRotate/>
+              <ambientLight intensity={1}/>
+              <directionalLight position={[3,2,1]}/>
+              <Sphere args={[1,100,200]} scale={2.4}>
+                <MeshDistortMaterial color="#3d1c56" attach='material' distort={.5} speed={2} />
+              </Sphere>
+            </Canvas>
           
             <Img src="./img/moon.png" />
-        </Right>
+         </Right>   
       </Container>
     </Section>
-  )
-}
+  );
+};
 
 export default Hero

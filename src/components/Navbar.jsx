@@ -21,7 +21,7 @@ gap:50px;
 `;
 const Logo = styled.img`
 
-height:50px;
+height:130px;
 
 `;
 const List = styled.ul`
@@ -58,7 +58,7 @@ const Navbar = () => {
     <Section>
       <Container>
           <Links>
-          <Logo src="./img/logoti.png" />
+          <Logo src="./img/meteoro.png" />
           <List>
             <ListItem>Home</ListItem>
             <ListItem>Studio</ListItem>

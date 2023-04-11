@@ -1,10 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import  React from 'react';
+import styled from 'styled-components';
+
 
 const data=[
   "Web Design",
   "Development",
-  "Ilustration",
+  "Illustration",
   "Product Design",
   "Social Media",
 ];
@@ -67,19 +68,23 @@ position:relative;
 
 `;
 const Works = () => {
+  
+
   return (
     <Section>
       <Container>
         <Left>
-        <List>
-        {data.map((item)=>(
-          <ListItem key={item} text={item}>{item}</ListItem>))}
-        </List>
+          <List>
+            {data.map((item)=>(
+              <ListItem key={item} text={item}>{item}</ListItem>))}
+          </List>
         </Left>
-        <Right></Right>
+        <Right>
+              {/*{work === "Web Design" ? (<WebDesign />): work === "Development" ? (<Development/>):(<ProductDesign/>)}*/}
+        </Right>
       </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;
